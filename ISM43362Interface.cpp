@@ -82,6 +82,10 @@ ISM43362Interface::ISM43362Interface(bool debug)
     _mutex.unlock();
 }
 
+bool ISM43362Interface::reset(void) {
+    return _ism.reset();
+}
+
 nsapi_error_t ISM43362Interface::connect(const char *ssid, const char *pass, nsapi_security_t security,
                                          uint8_t channel)
 {

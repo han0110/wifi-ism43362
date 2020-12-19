@@ -33,6 +33,13 @@ public:
      */
     ISM43362Interface(bool debug = MBED_CONF_ISM43362_WIFI_DEBUG);
 
+    /**
+    * Reset ISM43362
+    *
+    * @return true only if ISM43362 resets successfully
+    */
+    bool reset(void);
+
     /** Start the interface
      *
      *  Attempts to connect to a WiFi network. Requires ssid and passphrase to be set.
